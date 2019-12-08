@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/TheMovieDb/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/TheMovieDb/static/js/main.a5b2d3c5.chunk.js",
-    "main.js.map": "/TheMovieDb/static/js/main.a5b2d3c5.chunk.js.map",
+    "main.css": "/TheMovieDb/static/css/main.83b46be0.chunk.css",
+    "main.js": "/TheMovieDb/static/js/main.c7043fe0.chunk.js",
+    "main.js.map": "/TheMovieDb/static/js/main.c7043fe0.chunk.js.map",
     "runtime-main.js": "/TheMovieDb/static/js/runtime-main.8b9a5bd5.js",
     "runtime-main.js.map": "/TheMovieDb/static/js/runtime-main.8b9a5bd5.js.map",
     "static/css/2.ccd04584.chunk.css": "/TheMovieDb/static/css/2.ccd04584.chunk.css",
-    "static/js/2.c6a2c3bf.chunk.js": "/TheMovieDb/static/js/2.c6a2c3bf.chunk.js",
-    "static/js/2.c6a2c3bf.chunk.js.map": "/TheMovieDb/static/js/2.c6a2c3bf.chunk.js.map",
+    "static/js/2.16662ba3.chunk.js": "/TheMovieDb/static/js/2.16662ba3.chunk.js",
+    "static/js/2.16662ba3.chunk.js.map": "/TheMovieDb/static/js/2.16662ba3.chunk.js.map",
     "index.html": "/TheMovieDb/index.html",
-    "precache-manifest.f1e5adb4d639923b6140aac8abd876bd.js": "/TheMovieDb/precache-manifest.f1e5adb4d639923b6140aac8abd876bd.js",
+    "precache-manifest.9545e34b977ac819e1ef2f50e3b9a7a8.js": "/TheMovieDb/precache-manifest.9545e34b977ac819e1ef2f50e3b9a7a8.js",
     "service-worker.js": "/TheMovieDb/service-worker.js",
     "static/css/2.ccd04584.chunk.css.map": "/TheMovieDb/static/css/2.ccd04584.chunk.css.map",
-    "static/css/main.5ecd60fb.chunk.css.map": "/TheMovieDb/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.c6a2c3bf.chunk.js.LICENSE": "/TheMovieDb/static/js/2.c6a2c3bf.chunk.js.LICENSE",
+    "static/css/main.83b46be0.chunk.css.map": "/TheMovieDb/static/css/main.83b46be0.chunk.css.map",
+    "static/js/2.16662ba3.chunk.js.LICENSE": "/TheMovieDb/static/js/2.16662ba3.chunk.js.LICENSE",
     "static/media/semantic.min.css": "/TheMovieDb/static/media/outline-icons.f5f2566b.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.8b9a5bd5.js",
     "static/css/2.ccd04584.chunk.css",
-    "static/js/2.c6a2c3bf.chunk.js",
-    "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.a5b2d3c5.chunk.js"
+    "static/js/2.16662ba3.chunk.js",
+    "static/css/main.83b46be0.chunk.css",
+    "static/js/main.c7043fe0.chunk.js"
   ]
 }
