@@ -7,8 +7,39 @@ export default class Carousel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            movies: []
-        };
+            movies: [],
+            params: {
+                slidesPerView: 6,
+                spaceBetween: 50,
+                loop: true,
+                // autoplay: {
+                //     delay: 2500,
+                //     disableOnInteraction: false
+                // },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 6,
+                        spaceBetween: 30
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    },
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    }
+                }
+            },
+        }
     }
 
     componentDidMount() {
@@ -24,7 +55,9 @@ export default class Carousel extends Component {
                                 poster_path={movie.poster_path}
                                 title={movie.title}
                                 vote_average={movie.vote_average}
-                                original_title={movie.original_title}/>
+                                original_title={movie.original_title}
+                                release_date={movie.release_date}
+                            />
                         </div>
                     );
                 });
@@ -33,41 +66,12 @@ export default class Carousel extends Component {
     }
 
     render() {
-        const params = {
-            slidesPerView: 6,
-            spaceBetween: 50,
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 6,
-                    spaceBetween: 40
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 30
-                },
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 10
-                }
-            }
-        }
         return this.state.movies.length > 0 ? (
-            <Swiper {...params}>
-                {this.state.movies}
-            </Swiper>
+            <div className="ui container">
+                <Swiper {...this.state.params}>
+                    {this.state.movies}
+                </Swiper>
+            </div>
         ) : false;
     }
 }
