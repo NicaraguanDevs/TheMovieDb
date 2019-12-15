@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import 'bulma/css/bulma.min.css'
 
 export default class Navbar extends Component {
     constructor(props) {
@@ -16,7 +15,8 @@ export default class Navbar extends Component {
                         <img src="https://i.ibb.co/g3XJxD3/logo.png" width="122" height="38" alt=""/>
                     </a>
 
-                    <a onClick={this.toggleNavbar} href="http://" role="button" className="navbar-burger burger" aria-label="menu"
+                    <a onClick={this.toggleNavbar} href="http://" role="button" className="navbar-burger burger"
+                       aria-label="menu"
                        aria-expanded="false"
                        data-target="navBarMain">
                         <span aria-hidden="true"/>

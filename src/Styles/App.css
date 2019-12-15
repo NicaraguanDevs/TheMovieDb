@@ -1,3 +1,11 @@
+.movies-container {
+    margin-top: 3rem !important;
+}
+
+.carousel {
+    margin-top: 1rem;
+}
+
 .swiper-slide {
     margin-bottom: 2px;
 }
@@ -8,4 +16,9 @@
 
 .ui.card > .image > img, .ui.cards > .card > .image > img {
     height: 230px;
+}
+
+footer {
+    margin-top: 3rem;
+    color: #081c24;
 }

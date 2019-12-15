@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.min.css'
 import Movie from "./Movie";
+import axios from 'axios';
 
 export default class Carousel extends Component {
     constructor(props) {
@@ -12,10 +13,10 @@ export default class Carousel extends Component {
                 slidesPerView: 6,
                 spaceBetween: 50,
                 loop: true,
-                // autoplay: {
-                //     delay: 2500,
-                //     disableOnInteraction: false
-                // },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false
+                },
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
@@ -43,11 +44,10 @@ export default class Carousel extends Component {
     }
 
     componentDidMount() {
-        let url = `https://api.themoviedb.org/3/movie/popular?api_key=16c54b5cc29a4cc43c2fe52d3be06784&language=es-es&page=1`;
-        fetch(url)
-            .then(response => response.json())
-            .then(result => {
-                let movies = result.results.map(movie => {
+        const getMovies = async () => {
+            try {
+                const response = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=16c54b5cc29a4cc43c2fe52d3be06784&language=es-es&page=1`);
+                let movies = response.data.results.map(movie => {
                     return (
                         <div key={movie.id} className="swiper-slide">
                             <Movie
@@ -61,13 +61,17 @@ export default class Carousel extends Component {
                         </div>
                     );
                 });
-                this.setState({movies})
-            });
+                this.setState({movies});
+            } catch (error) {
+                console.log(error)
+            }
+        };
+        getMovies()
     }
 
     render() {
         return this.state.movies.length > 0 ? (
-            <div className="ui container">
+            <div className="ui carousel container">
                 <Swiper {...this.state.params}>
                     {this.state.movies}
                 </Swiper>
