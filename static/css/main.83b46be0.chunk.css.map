@@ -1,1 +1,0 @@
-{"version":3,"sources":["Movie.css"],"names":[],"mappings":"AAAA,cACI,iBACJ,CAEA,SACI,WACJ,CAEA,+CACI,YACJ","file":"main.83b46be0.chunk.css","sourcesContent":[".swiper-slide {\n    margin-bottom: 2px;\n}\n\n.ui.card {\n    width: 154px;\n}\n\n.ui.card > .image > img, .ui.cards > .card > .image > img {\n    height: 230px;\n}"]}
