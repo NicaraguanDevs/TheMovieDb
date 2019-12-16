@@ -19,6 +19,10 @@
 }
 
 footer {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     color: #081c24;
+}
+
+.paginator {
+    margin-top: 2rem !important;
 }

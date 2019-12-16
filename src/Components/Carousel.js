@@ -43,30 +43,31 @@ export default class Carousel extends Component {
         }
     }
 
+    async getMovies() {
+        try {
+            const response = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=16c54b5cc29a4cc43c2fe52d3be06784&language=es-es&page=1`);
+            let movies = response.data.results.map(movie => {
+                return (
+                    <div key={movie.id} className="swiper-slide">
+                        <Movie
+                            key={movie.id}
+                            poster_path={movie.poster_path}
+                            title={movie.title}
+                            vote_average={movie.vote_average}
+                            original_title={movie.original_title}
+                            release_date={movie.release_date}
+                        />
+                    </div>
+                );
+            });
+            this.setState({movies});
+        } catch (error) {
+            console.log(error)
+        }
+    };
+
     componentDidMount() {
-        const getMovies = async () => {
-            try {
-                const response = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=16c54b5cc29a4cc43c2fe52d3be06784&language=es-es&page=1`);
-                let movies = response.data.results.map(movie => {
-                    return (
-                        <div key={movie.id} className="swiper-slide">
-                            <Movie
-                                key={movie.id}
-                                poster_path={movie.poster_path}
-                                title={movie.title}
-                                vote_average={movie.vote_average}
-                                original_title={movie.original_title}
-                                release_date={movie.release_date}
-                            />
-                        </div>
-                    );
-                });
-                this.setState({movies});
-            } catch (error) {
-                console.log(error)
-            }
-        };
-        getMovies()
+        this.getMovies();
     }
 
     render() {

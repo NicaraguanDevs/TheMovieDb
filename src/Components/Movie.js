@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 
 class Movie extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <a className="ui card" href={"https://image.tmdb.org/t/p/original" + this.props.poster_path}>
