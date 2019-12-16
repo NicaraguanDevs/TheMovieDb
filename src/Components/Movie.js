@@ -3,22 +3,6 @@ import React, {Component} from 'react';
 class Movie extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            popularity: '',
-            vote_count: '',
-            video: '',
-            poster_path: '',
-            id: '',
-            adult: '',
-            backdrop_path: '',
-            original_language: '',
-            original_title: '',
-            genre_ids: [],
-            title: '',
-            vote_average: '',
-            overview: '',
-            release_date: ''
-        };
     }
 
     render() {
