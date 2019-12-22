@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
 
 class Pagination extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            page: 1
-        }
-    }
-
     render() {
         return (
             <div className="ui buttons paginator">
@@ -16,7 +9,7 @@ class Pagination extends Component {
                     Previous
                 </button>
                 <button className="ui button">
-                    {this.state.page}
+                    {this.props.actualPage}
                 </button>
                 <button onClick={this.props.nextPage} className="ui right labeled icon button">
                     Next

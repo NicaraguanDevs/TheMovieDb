@@ -63,6 +63,7 @@ class MoviesContainer extends Component {
                 <div className="ui centered grid">
                     <Pagination
                         nextPage={this.nextPage}
+                        actualPage={this.state.page - 1} //First page is for Carousel
                         previousPage={this.previousPage}
                     />
                 </div>
