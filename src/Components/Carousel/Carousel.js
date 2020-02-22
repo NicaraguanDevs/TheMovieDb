@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.min.css'
-import Movie from "./Movie";
+import Movie from "../Movie";
 import axios from 'axios';
 
 export default class Carousel extends Component {

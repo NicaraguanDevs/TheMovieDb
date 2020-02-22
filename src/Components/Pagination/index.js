@@ -1,1 +1,1 @@
-export {defailt} from './Pagination'
+export {default} from './Pagination'

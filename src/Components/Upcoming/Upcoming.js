@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios'
-import Item from "./Item";
+import Item from "../Item";
 
 class Upcoming extends Component {
     constructor(props) {
