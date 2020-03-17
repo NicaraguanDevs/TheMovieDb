@@ -50,9 +50,8 @@ export default class Carousel extends Component {
       );
       let movies = response.data.results.map((movie, i) => {
         return (
-          <div className="swiper-slide">
+          <div key={movie.id} className="swiper-slide">
             <Movie
-              key={i}
               id={movie.id}
               poster_path={movie.poster_path}
               title={movie.title}

@@ -84,11 +84,11 @@ function MoviePage(props) {
             height="540"
             src={`https://www.youtube.com/embed/${video}`}
             title={movie.title}
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
         <div className="sixteen wide column">
-          <h2 className="ui header">Peliculas Similares</h2>
+          <h2 className="ui header">Películas Similares</h2>
           <SimilarMoviesContainer id={props.match.params.id} />
         </div>
       </div>
